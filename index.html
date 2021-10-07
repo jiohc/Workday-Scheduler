@@ -25,13 +25,16 @@
 
   <body>
     <header class="jumbotron text-center">
-        <h1 class="display-3">Work Day Scheduler</h1>
-        <p class="lead">A simple calendar app for scheduling your work day</p>
+        <h1 class="display-3">Work Day Schedule</h1>
+        <p class="lead">For</p>
         <p id="currentDay" class="lead"></p>
       </header>
   
-      <!-- Timeblocks 7AM to 5PM -->
+      
       <div class="container">
+        <h2 id="current">Current Time:</h2>
+        <div id="time"></div>
+        
         <div class="row time-block" id="7">
           <div class="col-1 hour pt-2">7AM</div>
           <textarea class="col-10 plan"></textarea>

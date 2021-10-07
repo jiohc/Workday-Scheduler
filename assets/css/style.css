@@ -2,6 +2,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
+    padding-bottom: 30px;
   }
   
   textarea{
@@ -18,14 +19,35 @@ body {
     background-color: transparent;
     color: black;
     border-radius: 0;
-    border-bottom: 10px solid black;
+    border-bottom: 7px solid black;
+  }
+  
+  .lead {
+    font-size: 3rem;
+    padding-top: 1rem;
+  }
+  
+  #currentDay {
+    font-size: 3rem !important;
+    padding-top: 1rem;
+  }
+
+  #current {
+    text-align: center;
+    font-size: 3rem !important;
+  }
+
+  #time {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 30px !important;
   }
   
   .description{
     white-space: pre-wrap;
   }
   
-  .time-block{
+  .time-block {
     text-align: center;
     border-radius: 15px;
   }
@@ -33,22 +55,24 @@ body {
   .row {
     white-space: pre-wrap;
     height: 80px;
-    border-top: 1px solid white;;
+    border-top: 5px solid white;;
   }
   
   .hour {
     background-color: #ffffff;
     color: #000000;
-    border-top: 1px dashed #000000;
+    border-top: 5px;
+    border-bottom: 1px solid black;
+    padding-top: 1.75rem !important;
   }
   
   .past {
-    background-color: #d3d3d3;
+    background-color: #808080;
     color: white;
   }
   
   .present {
-    background-color: #ff6961;
+    background-color: rgb(108, 106, 255);
     color: white;
   }
   
@@ -59,13 +83,14 @@ body {
   
   .saveBtn {
     border-left: 1px solid black;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #06AED5;
+    border-radius: 15px;
+    background-color: #000000;
     color: white;
   }
   
   .saveBtn i:hover {
-    font-size: 20px;
-    transition: all .3s ease-in-out;
+    font-size: 30px;
   }
+  
+
+  

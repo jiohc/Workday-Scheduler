@@ -5,7 +5,41 @@ var saveBtn = $(".saveBtn");
 // current day 
 $("#currentDay").text(moment().format('dddd MMMM Do YYYY'));
 
-// each time block is color-coded to indicate whether it is in the past, present, or future
+// current time
+function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
+  
+  function startTime() {
+    var today = new Date();
+    var hours = today.getHours();
+    var mins = today.getMinutes();
+    var secs = today.getSeconds();
+    
+    // convert 24 hour time to 12 hour time with AM/PM
+    var session = ' AM'
+    if(hours === 0) {
+        hours = 12;
+    }
+    if(hours > 12) {
+        hours = hours - 12;
+        session = ' PM'
+    }
+    
+    mins = checkTime(mins);
+    secs = checkTime(secs);
+    document.getElementById('time').innerHTML = hours + ":" + mins + ":" + secs + session;
+    t = setTimeout(function() {
+      startTime()
+    }, 500);
+  }
+
+  
+
+// each time row color coded for past, present, future
 function timeBlockColor() {
     var hour = moment().hours();
 
@@ -48,5 +82,6 @@ function usePlanner() {
 
 // call functions
 
+startTime()
 timeBlockColor();
 usePlanner();
